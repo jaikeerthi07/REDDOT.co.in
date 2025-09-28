@@ -28,7 +28,8 @@ Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
 2. Sign in with GitHub
 3. Click "Continue with GitHub"
 4. Select your `reddot-website` repository
-5. Configure project settings:
+5. Vercel should automatically detect this as a Next.js project
+6. If not, configure project settings:
    - Framework: Next.js
    - Build Command: `npm run build`
    - Output Directory: `.next`
@@ -49,10 +50,12 @@ Note: The EMAIL_PASSWORD is no longer required. Form submissions will be logged 
 ## Step 5: Redeploy
 After adding environment variables, trigger a new deployment from the Vercel dashboard.
 
-## Important Notes
-- For Gmail to work, you need to use an App Password, not your regular password
-- Make sure to enable 2-Factor Authentication on your Google account first
-- Generate an App Password at: https://myaccount.google.com/apppasswords
+## Troubleshooting
+If you encounter the "couldn't find any pages or app directory" error:
+1. Make sure your repository structure includes `src/app/page.tsx`
+2. Check that your `vercel.json` configuration is correct
+3. Ensure your `next.config.js` is properly configured
+4. Verify that the build command runs successfully locally
 
 ## Contact Information
 - Founder: Jai Keerthi
